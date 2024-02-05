@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
         - name: python-webapp-k8s
-          image: adijaiswal/santa:latest
+          image: adijaiswal/python-webapp:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 8080
+            - containerPort: 5000
           resources:
             requests:
               memory: 1Gi
@@ -37,6 +37,6 @@ spec:
     app: python-webapp-k8s
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 5000
+      targetPort: 5000
   type: NodePort
